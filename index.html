@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Your Website</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#connect">Connect</a></li>
+                <li><a href="#others">Others</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- Content for Home -->
+        <section id="home" class="page">
+            <h2>Home</h2>
+            <div>
+                <label>Name:</label>
+                <p id="name"></p>
+
+                <label>Summary:</label>
+                <p id="summary"></p>
+
+                <label>Education:</label>
+                <p id="education"></p>
+
+                <label>Certifications:</label>
+                <p id="certifications"></p>
+
+                <label>Number of views for this page:</label>
+                <p id="views">0</p>
+            </div>
+        </section>
+
+        <!-- Content for Projects -->
+        <section id="projects" class="page">
+            <h2>Projects</h2>
+            <div>
+                <label>Project URL:</label>
+                <p id="projectUrl"></p>
+
+                <label>Project Description:</label>
+                <p id="projectDescription"></p>
+            </div>
+        </section>
+
+        <!-- Content for Connect -->
+        <section id="connect" class="page">
+            <h2>Connect</h2>
+            <div>
+                <label>Linkedin:</label>
+                <p id="linkedin"></p>
+
+                <label>Email:</label>
+                <input type="text" id="emailInput" placeholder="Enter your message">
+                <button onclick="sendEmail()">Send</button>
+            </div>
+        </section>
+
+        <!-- Content for Others -->
+        <section id="others" class="page">
+            <h2>Others</h2>
+            <div>
+                <label>URL 1:</label>
+                <p id="url1"></p>
+
+                <label>URL 2:</label>
+                <p id="url2"></p>
+
+                <label>URL 3:</label>
+                <p id="url3"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+
+    <a id="downloadLink" download="your_document.pdf" style="display:none">Download PDF</a>
+</body>
+</html>
