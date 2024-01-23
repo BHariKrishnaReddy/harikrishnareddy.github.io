@@ -19,11 +19,6 @@ function sendEmail() {
     console.log(`Email sent to ${userEmail}`);
 }
 
-// Trigger updateViews on page load
-document.addEventListener('DOMContentLoaded', function() {
-    updateViews();
-});
-
 // Function to generate and download a PDF file
 function downloadPDF() {
     const pdfContent = "This is your PDF content. Customize as needed.";
@@ -40,3 +35,26 @@ function downloadPDF() {
     // Clean up
     URL.revokeObjectURL(url);
 }
+
+// Handle favicon request (for Node.js with Express)
+const isExpress = typeof module !== 'undefined' && module.exports;
+if (isExpress) {
+    const express = require('express');
+    const app = express();
+
+    // Serve the favicon.ico file from the root directory
+    app.get('/favicon.ico', (req, res) => res.sendFile(__dirname + '/favicon.ico'));
+
+    // Your other routes and middleware
+
+    // Start the server
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+}
+
+// Trigger updateViews on page load
+document.addEventListener('DOMContentLoaded', function() {
+    updateViews();
+});
